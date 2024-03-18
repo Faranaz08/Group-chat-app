@@ -431,10 +431,10 @@ async function setupGroup(groupId, userId) {
 async function setupProfile() {
     try {
         const getUserResponse = await axios.get('/user/get-user');
-        const {name,email,phonenumber,imageUrl} = getUserResponse.data.user;
+        const {name,email,phoneNumber,imageUrl} = getUserResponse.data.user;
         profileModel.name.innerText = name,
         profileModel.email.innerText = email,
-        profileModel.phoneNumber.innerText = phonenumber,
+        profileModel.phoneNumber.innerText = phoneNumber,
         profileModel.image.src = `https://picsum.photos/seed/${imageUrl}/200`
     } catch (error) {
         console.log(error);

@@ -1,6 +1,6 @@
 
-const User = require('../models/users');
-const ForgotPasswords = require('../models/forgot-password');
+const User = require('../models/User');
+const ForgotPasswords = require('../models/ForgotPassword');
 const bcrypt = require('bcrypt');
 const Sib = require('sib-api-v3-sdk');
 const client = Sib.ApiClient.instance;
@@ -18,8 +18,8 @@ exports.userResetpasswordMail = async (request, response, next) => {
         });
         if (user) {
             const sender = {
-                email: 'ramanizum@gmail.com',
-                name: 'From Mufil Rahman Pvt.Ltd'
+                email: 'faranazannigeri3142@gmail.com',
+                name: 'from Faranaz'
             }
             const receivers = [
                 {
@@ -51,7 +51,7 @@ exports.userResetpasswordMail = async (request, response, next) => {
                                     </div>
                                     <div class="text-center">
                                         <hr>
-                                        <p>If you have any questions, contact us at <a href="mailto:mufilrahman.a@gmail.com">mufilrahman.a@gmail.com</a></p>
+                                        <p>If you have any questions, contact us at <a href="mailto:faranazannigeri3142@gmail.com">faranazannigeri3142@gmail.com</a></p>
                 
                                     </div>
                                 </div>

@@ -22,7 +22,7 @@ async function on_Signup(e) {
                 const data = {
                     name: signupElements.name.value,
                     email: signupElements.email.value,
-                    phonenumber: signupElements.phoneNo.value,
+                    phoneNumber: signupElements.phoneNo.value,
                     imageUrl:Math.floor(Math.random() * 1000),
                     password: signupElements.password1.value
                 }
@@ -105,7 +105,7 @@ async function Forgotpassword(e) {
             const data = {
                 email: ForgotModalELements.email.value
             }
-            await axios.post('user/forgotpassword', data);
+            await axios.post('user/forgot-password', data);
             helperFunctions.alertFunction(ForgotModalELements.alert2);
             forgot_form.reset();
             setTimeout(()=>{

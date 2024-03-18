@@ -7,14 +7,14 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 // Importing the routes for our API
-const sequelize = require('./util/database');
-const User = require('./models/users');
-const Forgotpasswords = require('./models/forgot-password');
-const ChatHistory = require('./models/chat-history');
-const Groups = require("./models/groups");
-const GroupMember = require('./models/group-members');
+const sequelize = require('./utils/database');
+const User = require('./models/User');
+const Forgotpasswords = require('./models/ForgotPassword');
+const ChatHistory = require('./models/ChatHistory');
+const Groups = require("./models/Group");
+const GroupMember = require('./models/GroupMember');
 
-const websocketService = require('./services/websocket');
+const websocketService = require('./services/WebSocket');
 const cronService = require('./services/cron');
 cronService.job.start();
 
