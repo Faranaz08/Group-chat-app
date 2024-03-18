@@ -16,7 +16,7 @@ const ArchivedChat = sequelize.define('ArchivedChat',{
       type : Sequelize.BOOLEAN , 
     defaultValue : false
   },
-    date_time: {
+    createdAt: {
       type: Sequelize.DATE,
       defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
     },

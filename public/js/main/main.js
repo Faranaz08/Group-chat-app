@@ -59,7 +59,7 @@ function showChatOnScreen(chatHistory, userId) {
     chat_body.innerHTNL = "";
     let messageText = "";
     chatHistory.forEach((ele) => {
-        const date = new Date(ele.date_time);
+        const date = new Date(ele.createdAt);
         const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
         const formattedDate = date.toLocaleString('en-US', options);
 

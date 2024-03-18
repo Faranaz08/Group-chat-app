@@ -19,7 +19,7 @@ async function archiveOldRecords() {
       // Find records to archive
       const recordsToArchive = await ChatHistory.findAll({
         where: {
-          date_time: {
+          createdAt: {
             [Op.lt]: tenDaysAgo,
           },
         },
@@ -31,7 +31,7 @@ async function archiveOldRecords() {
           await ArchivedChat.create({
             id: record.id,
             message: record.message,
-            date_time: record.date_time,
+            createdAt: record.createdAt,
             isImage:record.isImage,
             UserId: record.UserId,
             GroupId: record.GroupId

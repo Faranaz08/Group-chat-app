@@ -94,10 +94,10 @@ exports.getAllChatHistory = async (request, response, next) => {
             include: [
                 {
                     model: User,
-                    attibutes: ['id', 'name', 'date_time']
+                    attibutes: ['id', 'name', 'createdAt']
                 }
             ],
-            order: [['date_time', 'ASC']],
+            order: [['createdAt', 'ASC']],
             where: {
                 GroupId: null,
                 id: {
@@ -113,7 +113,7 @@ exports.getAllChatHistory = async (request, response, next) => {
                 isImage: ele.isImage,
                 name: user.name,
                 userId: user.id,
-                date_time: ele.date_time
+                createdAt: ele.createdAt
             }
         })
         return response.status(200).json({ chats, message: "User chat History Fetched" })
@@ -208,10 +208,10 @@ exports.getGroupChatHistory = async (request, response, next) => {
             include: [
                 {
                     model: User,
-                    attibutes: ['id', 'name', 'date_time']
+                    attibutes: ['id', 'name', 'createdAt']
                 }
             ],
-            order: [['date_time', 'ASC']],
+            order: [['createdAt', 'ASC']],
             where: {
                 GroupId: Number(groupId),
             }
@@ -224,7 +224,7 @@ exports.getGroupChatHistory = async (request, response, next) => {
                 isImage: ele.isImage,
                 name: user.name,
                 userId: user.id,
-                date_time: ele.date_time
+                createdAt: ele.createdAt
             }
         })
         return response.status(200).json({ chats, message: "User chat History Fetched" })

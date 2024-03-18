@@ -2,8 +2,8 @@ const express = require('express');
 const userControler = require('../controllers/user')
 const passwordController = require('../controllers/password')
 const mainPagecontroler = require('../controllers/main-page')
-const authController = require('../middleware/authentication')
-const multerMiddleware = require('../middleware/multer')
+const authController = require('../middlewares/authentication')
+const multerMiddleware = require('../middlewares/multer')
 const upload = multerMiddleware.multer.single('image');
 const router = express.Router();
 
