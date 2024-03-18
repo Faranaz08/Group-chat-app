@@ -1,3 +1,2 @@
-
-./nodemodules
+/nodemodules
 .env
